@@ -1,5 +1,4 @@
 # 1 "C:\\Users\\coolt\\Desktop\\github\\Tetris_Game_file\\Tetris_Game_file\\Tetris_Game_file.ino"
-# 2 "C:\\Users\\coolt\\Desktop\\github\\Tetris_Game_file\\Tetris_Game_file\\Tetris_Game_file.ino" 2
 /*
 
 아두이노 연결 순서
@@ -17,7 +16,9 @@ DIN=Pin12, CS=Pin10, CLK=pin11, VCC=5V, GND=GND
 SW=Pin8, X-A=Analog Pin1, Y-A=Analog Pin0, VCC=5V, GND=GND
 
 */
-# 12 "C:\\Users\\coolt\\Desktop\\github\\Tetris_Game_file\\Tetris_Game_file\\Tetris_Game_file.ino"
+# 11 "C:\\Users\\coolt\\Desktop\\github\\Tetris_Game_file\\Tetris_Game_file\\Tetris_Game_file.ino"
+# 12 "C:\\Users\\coolt\\Desktop\\github\\Tetris_Game_file\\Tetris_Game_file\\Tetris_Game_file.ino" 2
+
 LedControl lc =LedControl(12,11,10,4);
 int num;
 
@@ -35,7 +36,7 @@ void setup() // 보드의 특정 핀 기능 설정, 시리얼 통신 속도 등 
                                  이때문에 사용자가 쉽게 플로팅현상을 해결하기 위해서 아두이노에는 기본적으로 내부에 풀업저항이 달려있습니다.
 
                                  플로팅현상을 해결하기 위해서 내부 PULLUP 코드를 사용 하였습니다.*/
-# 27 "C:\\Users\\coolt\\Desktop\\github\\Tetris_Game_file\\Tetris_Game_file\\Tetris_Game_file.ino"
+# 28 "C:\\Users\\coolt\\Desktop\\github\\Tetris_Game_file\\Tetris_Game_file\\Tetris_Game_file.ino"
 }
 
 // matrix 함수 선언

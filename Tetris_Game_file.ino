@@ -1,4 +1,3 @@
-#include <LedControl.h>
 /*
 아두이노 연결 순서
 
@@ -8,6 +7,8 @@ DIN=Pin12, CS=Pin10, CLK=pin11, VCC=5V, GND=GND
 조이스틱
 SW=Pin8, X-A=Analog Pin1, Y-A=Analog Pin0, VCC=5V, GND=GND
 */
+
+#include <LedControl.h>
 
 LedControl lc =LedControl(12,11,10,4);
 int num;

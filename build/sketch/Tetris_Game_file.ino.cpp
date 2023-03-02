@@ -1,6 +1,5 @@
 #include <Arduino.h>
 #line 1 "C:\\Users\\coolt\\Desktop\\github\\Tetris_Game_file\\Tetris_Game_file\\Tetris_Game_file.ino"
-#include <LedControl.h>
 /*
 아두이노 연결 순서
 
@@ -11,16 +10,18 @@ DIN=Pin12, CS=Pin10, CLK=pin11, VCC=5V, GND=GND
 SW=Pin8, X-A=Analog Pin1, Y-A=Analog Pin0, VCC=5V, GND=GND
 */
 
+#include <LedControl.h>
+
 LedControl lc =LedControl(12,11,10,4);
 int num;
 
-#line 15 "C:\\Users\\coolt\\Desktop\\github\\Tetris_Game_file\\Tetris_Game_file\\Tetris_Game_file.ino"
+#line 16 "C:\\Users\\coolt\\Desktop\\github\\Tetris_Game_file\\Tetris_Game_file\\Tetris_Game_file.ino"
 void setup();
-#line 30 "C:\\Users\\coolt\\Desktop\\github\\Tetris_Game_file\\Tetris_Game_file\\Tetris_Game_file.ino"
+#line 31 "C:\\Users\\coolt\\Desktop\\github\\Tetris_Game_file\\Tetris_Game_file\\Tetris_Game_file.ino"
 void matrix();
-#line 47 "C:\\Users\\coolt\\Desktop\\github\\Tetris_Game_file\\Tetris_Game_file\\Tetris_Game_file.ino"
+#line 48 "C:\\Users\\coolt\\Desktop\\github\\Tetris_Game_file\\Tetris_Game_file\\Tetris_Game_file.ino"
 void loop();
-#line 15 "C:\\Users\\coolt\\Desktop\\github\\Tetris_Game_file\\Tetris_Game_file\\Tetris_Game_file.ino"
+#line 16 "C:\\Users\\coolt\\Desktop\\github\\Tetris_Game_file\\Tetris_Game_file\\Tetris_Game_file.ino"
 void setup()                  // 보드의 특정 핀 기능 설정, 시리얼 통신 속도 등 기본적인 설정을 하는 부분
 {
  for(num=0; num<4; num++)     // 매트릭스 0번부터 3번까지 세팅
