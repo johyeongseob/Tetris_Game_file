@@ -1,0 +1,7 @@
+#line 1 "C:\\Users\\coolt\\Desktop\\github\\Tetris_Game_file\\Tetris_Game_file\\.vscode\\arduino.json"
+{
+    "sketch": "Tetris_Game_file.ino",
+    "board": "arduino:avr:uno",
+    "port": "COM3",
+    "output": ".\\build"
+}

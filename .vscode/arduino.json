@@ -1,0 +1,6 @@
+{
+    "sketch": "Tetris_Game_file.ino",
+    "board": "arduino:avr:uno",
+    "port": "COM3",
+    "output": ".\\build"
+}
