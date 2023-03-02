@@ -19,7 +19,7 @@ int num;
 void setup();
 #line 31 "C:\\Users\\coolt\\Desktop\\github\\Tetris_Game_file\\Tetris_Game_file\\Tetris_Game_file.ino"
 void matrix();
-#line 48 "C:\\Users\\coolt\\Desktop\\github\\Tetris_Game_file\\Tetris_Game_file\\Tetris_Game_file.ino"
+#line 52 "C:\\Users\\coolt\\Desktop\\github\\Tetris_Game_file\\Tetris_Game_file\\Tetris_Game_file.ino"
 void loop();
 #line 16 "C:\\Users\\coolt\\Desktop\\github\\Tetris_Game_file\\Tetris_Game_file\\Tetris_Game_file.ino"
 void setup()                  // 보드의 특정 핀 기능 설정, 시리얼 통신 속도 등 기본적인 설정을 하는 부분
@@ -46,12 +46,16 @@ void matrix()
  // lc.setRow 함수는 행(Row) 기준으로 도트매트릭스를 제어 lc.setRow(matrix_number,Row,value)
  for(int j=0; j<8; j++)
  {
-   lc.setRow(3,j,m[j]); // 3번째 매트릭스에서 '매'출력
-   lc.setRow(2,j,t[j]); // 2번째 매트릭스에서 '트'출력
-   lc.setRow(1,j,r[j]); // 1번째 매트릭스에서 '릭'출력
-   lc.setRow(0,j,x[j]); // 0번째 매트릭스에서 '스'출력
+  if (analogRead(A1) < 200){lc.setRow(3,j,m[j]);}
+  if (analogRead(A1) > 800){lc.setRow(2,j,t[j]);}
+  if (analogRead(A0) < 200){lc.setRow(1,j,r[j]);}
+  if (analogRead(A0) > 800){lc.setRow(0,j,x[j]);}
+  //  lc.setRow(3,j,m[j]);     // 3번째 매트릭스에서 '매'출력
+  //  lc.setRow(2,j,t[j]);     // 2번째 매트릭스에서 '트'출력
+  //  lc.setRow(1,j,r[j]);     // 1번째 매트릭스에서 '릭'출력
+  //  lc.setRow(0,j,x[j]);     // 0번째 매트릭스에서 '스'출력
  }
- delay(1000);
+ delay(50);
 }
 
 void loop() {
@@ -66,6 +70,4 @@ void loop() {
   Serial.print(analogRead(A0)); // X축 값이 표기됩니다.
   Serial.print("  ");           
   Serial.println(digitalRead(8)); // Z축(스위치) 값이 표기됩니다.
-
-  delay(100);   
 }
