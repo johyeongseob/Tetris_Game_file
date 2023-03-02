@@ -24,11 +24,11 @@
    "-IC:\\Users\\coolt\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.6\\cores\\arduino",
    "-IC:\\Users\\coolt\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.6\\variants\\standard",
    "-IC:\\Users\\coolt\\Documents\\Arduino\\libraries\\LedControl\\src",
-   "c:\\Users\\coolt\\Desktop\\github\\Tetris_Game_file\\Tetris_Game_file\\build\\sketch\\Tetris_Game_file.ino.cpp",
+   "C:\\Users\\coolt\\Desktop\\github\\Tetris_Game_file\\Tetris_Game_file\\build\\sketch\\Tetris_Game_file.ino.cpp",
    "-o",
-   "c:\\Users\\coolt\\Desktop\\github\\Tetris_Game_file\\Tetris_Game_file\\build\\sketch\\Tetris_Game_file.ino.cpp.o"
+   "C:\\Users\\coolt\\Desktop\\github\\Tetris_Game_file\\Tetris_Game_file\\build\\sketch\\Tetris_Game_file.ino.cpp.o"
   ],
-  "file": "c:\\Users\\coolt\\Desktop\\github\\Tetris_Game_file\\Tetris_Game_file\\build\\sketch\\Tetris_Game_file.ino.cpp"
+  "file": "C:\\Users\\coolt\\Desktop\\github\\Tetris_Game_file\\Tetris_Game_file\\build\\sketch\\Tetris_Game_file.ino.cpp"
  },
  {
   "directory": "c:\\Users\\coolt\\Desktop\\github\\Tetris_Game_file\\Tetris_Game_file",
@@ -57,7 +57,7 @@
    "-IC:\\Users\\coolt\\Documents\\Arduino\\libraries\\LedControl\\src",
    "C:\\Users\\coolt\\Documents\\Arduino\\libraries\\LedControl\\src\\LedControl.cpp",
    "-o",
-   "c:\\Users\\coolt\\Desktop\\github\\Tetris_Game_file\\Tetris_Game_file\\build\\libraries\\LedControl\\LedControl.cpp.o"
+   "C:\\Users\\coolt\\Desktop\\github\\Tetris_Game_file\\Tetris_Game_file\\build\\libraries\\LedControl\\LedControl.cpp.o"
   ],
   "file": "C:\\Users\\coolt\\Documents\\Arduino\\libraries\\LedControl\\src\\LedControl.cpp"
  }

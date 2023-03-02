@@ -1,4 +1,4 @@
-c:\Users\coolt\Desktop\github\Tetris_Game_file\Tetris_Game_file\build\libraries\LedControl\LedControl.cpp.o: \
+C:\Users\coolt\Desktop\github\Tetris_Game_file\Tetris_Game_file\build\libraries\LedControl\LedControl.cpp.o: \
  C:\Users\coolt\Documents\Arduino\libraries\LedControl\src\LedControl.cpp \
  C:\Users\coolt\Documents\Arduino\libraries\LedControl\src\LedControl.h \
  C:\Users\coolt\AppData\Local\Arduino15\packages\arduino\hardware\avr\1.8.6\cores\arduino/Arduino.h \
