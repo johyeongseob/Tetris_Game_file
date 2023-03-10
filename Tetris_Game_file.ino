@@ -2,6 +2,9 @@
 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
   Tetris_Game.ino
 
+  Search any function in arduino on the official arduino website.
+  Link: https://www.arduino.cc/
+
 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ 
 */ 
 
@@ -64,9 +67,8 @@ void setup()
 {
   ledSetup();
   Serial.begin(9600);                                                // serial communication using a serial protocol. baud rate = 9600.
-  pinMode(8, INPUT_PULLUP);       /* Z축 스위치에 별도의 저항이 달려있지 않기 때문에 스위치가 눌린지 안눌린지 헷깔려하는 `플로팅 현상`이 발생.
-                                     이때문에 사용자가 쉽게 플로팅현상을 해결하기 위해서 아두이노에는 기본적으로 내부에 풀업저항이 달려있습니다.
-                                     플로팅현상을 해결하기 위해서 내부 PULLUP 코드를 사용 하였습니다.*/
+  pinMode(8, INPUT_PULLUP);                                          // adds built-in resistance to the electrical circuit.
+  randomSeed(analogRead(0));                                         // initializes the pseudo-random number generator
 }
 
 
@@ -90,13 +92,13 @@ void loop()
   }
 
 
-
 void ledSetup()                                                      // dot_matrix setup function
 {
- for(num=0; num<4; num++)
-  {
-   lc.shutdown(num, false);                                          // power-saving mode: off in 0~3
-   lc.setIntensity(num,8);                                           // bright of matrix: set 8 in 0~15
-   lc.clearDisplay(num);                                             // window initialization
-  }
+  int devices=lc.getDeviceCount();                                   // the number of devices
+  for(num=0; num<devices; num++)
+   {
+    lc.shutdown(num, false);                                          // power-saving mode: off in 0~3
+    lc.setIntensity(num,8);                                           // bright of matrix: set 8 in 0~15
+    lc.clearDisplay(num);                                             // window initialization
+   }
 }

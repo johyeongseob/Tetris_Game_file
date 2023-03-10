@@ -7,11 +7,17 @@
 
 
 
+  Search any function in arduino on the official arduino website.
+
+  Link: https://www.arduino.cc/
+
+
+
 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ 
 
 */
-# 8 "C:\\Users\\coolt\\Desktop\\github\\Tetris_Game_file\\Tetris_Game_file\\Tetris_Game_file.ino"
-# 9 "C:\\Users\\coolt\\Desktop\\github\\Tetris_Game_file\\Tetris_Game_file\\Tetris_Game_file.ino" 2
+# 11 "C:\\Users\\coolt\\Desktop\\github\\Tetris_Game_file\\Tetris_Game_file\\Tetris_Game_file.ino"
+# 12 "C:\\Users\\coolt\\Desktop\\github\\Tetris_Game_file\\Tetris_Game_file\\Tetris_Game_file.ino" 2
 
 
 
@@ -65,17 +71,16 @@ int Tetro[7 /* Seven distinct one-sided tetrominoes*/][4 /* tetromino's Size is 
   }
 };
 
+int devices=lc.getDeviceCount();
+
 
 void setup()
 {
   ledSetup();
   Serial.begin(9600); // serial communication using a serial protocol. baud rate = 9600.
-  pinMode(8, 0x2); /* Z축 스위치에 별도의 저항이 달려있지 않기 때문에 스위치가 눌린지 안눌린지 헷깔려하는 `플로팅 현상`이 발생.
+  pinMode(8, 0x2); // adds built-in resistance to the electrical circuit.
+  randomSeed(analogRead(0)); // initializes the pseudo-random number generator
 
-                                     이때문에 사용자가 쉽게 플로팅현상을 해결하기 위해서 아두이노에는 기본적으로 내부에 풀업저항이 달려있습니다.
-
-                                     플로팅현상을 해결하기 위해서 내부 PULLUP 코드를 사용 하였습니다.*/
-# 70 "C:\\Users\\coolt\\Desktop\\github\\Tetris_Game_file\\Tetris_Game_file\\Tetris_Game_file.ino"
 }
 
 
@@ -94,6 +99,8 @@ void loop()
   Serial.print(analogRead(Y_value)); // Print Y value
   Serial.print("  ");
   Serial.println(digitalRead(8)); // Print Z value(switch)
+  Serial.print("  ");
+  Serial.println(devices);
   delay (500);
   for(num=0; num<4; num++) {lc.clearDisplay(num);}
   }
